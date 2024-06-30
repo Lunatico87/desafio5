@@ -54,8 +54,11 @@
 
       btn.addEventListener("click", () => {
         let value = document.querySelector("input").value;
+        let num1 = 100;
+        let num2 = 999;
+        let numeroAleatorio = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;     //para que el numero generado sea un numero entero
         let nueva_actividad = {
-          id: Date.now(),
+            id: numeroAleatorio,
           nombre: value,
           realizado: false,
         };
